@@ -17,10 +17,10 @@
     "prepack": "pnpm build",
     "prepare": "cpy \"node_modules/@public-ui/components/assets/**/*\" assets --dot",
     "start": "npm-run-all2 --parallel dev serve",
-    "serve": "sh serve.sh",
+    "serve": "sh serve.sh BWSt",
     "smoke-test": "pnpm clean && pnpm install && pnpm build && pnpm format && pnpm lint && pnpm unused && pnpm test",
-    "test": "kolibri-visual-test theme-snapshots.spec.js",
-    "test-update": "kolibri-visual-test --update-snapshots=changed theme-snapshots.spec.js",
+    "test": "cross-env THEME_MODULE=dist THEME_EXPORT=BWSt THEME_CSS=$(pwd)/inject-assets.css kolibri-visual-test",
+    "test:update": "cross-env THEME_MODULE=dist THEME_EXPORT=BWSt THEME_CSS=$(pwd)/inject-assets.css kolibri-visual-test --update-snapshots=changed theme-snapshots.spec.js",
     "pretest": "pnpm build && playwright install firefox",
     "pretest-update": "pnpm build && playwright install firefox",
     "unused": "knip",
@@ -30,9 +30,9 @@
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.58.2",
-    "@public-ui/components": "~4.1.2-rc.1",
-    "@public-ui/sample-react": "~4.1.2-rc.1",
-    "@public-ui/visual-tests": "~4.1.2-rc.1",
+    "@public-ui/components": "~4.1.2-rc.3",
+    "@public-ui/sample-react": "~4.1.2-rc.3",
+    "@public-ui/visual-tests": "~4.1.2-rc.3",
     "@rollup/plugin-commonjs": "29.0.2",
     "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-typescript": "12.3.0",
@@ -41,6 +41,7 @@
     "adopted-style-sheets": "1.1.9-rc.21",
     "autoprefixer": "10.4.27",
     "cpy-cli": "7.0.0",
+    "cross-env": "10.1.0",
     "eslint": "10.0.3",
     "knip": "5.87.0",
     "nodemon": "3.1.14",
@@ -60,7 +61,7 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "@public-ui/components": "~4.1.2-rc.1"
+    "@public-ui/components": "~4.1.2-rc.3"
   },
   "exports": {
     ".": {
