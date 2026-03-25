@@ -30,9 +30,9 @@
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@playwright/test": "1.58.2",
-    "@public-ui/components": "~4.1.2-rc.1",
-    "@public-ui/sample-react": "~4.1.2-rc.1",
-    "@public-ui/visual-tests": "~4.1.2-rc.1",
+    "@public-ui/components": "~4.1.2-rc.3",
+    "@public-ui/sample-react": "~4.1.2-rc.3",
+    "@public-ui/visual-tests": "~4.1.2-rc.3",
     "@rollup/plugin-commonjs": "29.0.2",
     "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-typescript": "12.3.0",
@@ -61,7 +61,7 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "@public-ui/components": "~4.1.2-rc.1"
+    "@public-ui/components": "~4.1.2-rc.3"
   },
   "exports": {
     ".": {
