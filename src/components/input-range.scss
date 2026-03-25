@@ -28,13 +28,13 @@
 		}
 
 		&__input--range {
+			border-radius: var(--border-radius);
 			height: to-rem(8);
 			padding: 0;
-			border-radius: var(--border-radius);
 			border-width: 0;
 			&::-webkit-slider-thumb {
-				-webkit-appearance: none;
 				background: var(--color-primary-variant);
+				-webkit-appearance: none;
 			}
 
 			&::-moz-range-thumb {
